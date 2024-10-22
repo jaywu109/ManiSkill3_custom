@@ -390,6 +390,8 @@ def _main(args, proc_id: int = 0, num_procs=1, pbar=None):
         env_kwargs["control_mode"] = target_control_mode
     env_kwargs["shader_dir"] = args.shader
     env_kwargs["reward_mode"] = args.reward_mode
+    env_kwargs['sensor_configs'] = dict(width=300, height=300)
+    env_kwargs['enable_shadow'] = True    
     env_kwargs[
         "render_mode"
     ] = (
